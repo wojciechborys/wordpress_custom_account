@@ -1,0 +1,183 @@
+.account-communication {
+  min-height: 250px;
+
+  .no-applications {
+    padding: 25px;
+  }
+
+  #communication-title {
+    border-left: 1px solid var(--color-gray);
+    padding: 0px 35px;
+
+    .application_number {
+      font-size: 32px;
+    }
+  }
+
+  #list-column {
+    border-top: 1px solid var(--color-gray);
+    padding: 0;
+    .comment {
+      &__title {
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: none;
+        font-family: "futura-pt", sans-serif;
+      }
+      &__wrapper {
+        padding: 20px 20px 0 40px;
+        display: block;
+        text-decoration: none;
+        &.new {
+          position: relative;
+          &::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            display: block;
+            left: 10px;
+            background-color: rgba(243, 123, 0, 1);
+          }
+        }
+        &.active {
+          position: relative;
+          background-color: rgba(34, 45, 116, 0.05);
+          &::before {
+            content: "";
+            width: 7px;
+            position: absolute;
+            top: 0;
+            display: block;
+            left: 0;
+            bottom: 0;
+            background-color: var(--color-green);
+          }
+        }
+      }
+
+      &__newest {
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--color-gray);
+        &--text {
+          color: rgba(111, 111, 111, 1);
+          line-height: 24px;
+          margin-bottom: 10px;
+          font-size: 16px;
+        }
+
+        &--date {
+          font-style: italic;
+          font-size: 14px;
+          color: var(--color-gray);
+        }
+      }
+    }
+  }
+  &.dashboard {
+    #list-column {
+      border-top: none;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+      h3 {
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--color-gray);
+      }
+
+      .comment__wrapper {
+        padding-left: 0;
+      }
+    }
+  }
+  #communication-column {
+    border-left: 1px solid var(--color-gray);
+    border-top: 1px solid var(--color-gray);
+    padding: 0px 35px;
+    .comments-container {
+      padding: 20px 0;
+      &__single {
+        width: 70%;
+        margin-bottom: 20px;
+        &--comment {
+          padding: 20px;
+          background: rgba(34, 45, 116, 0.051);
+          border-radius: 10px;
+          border-bottom-left-radius: 0;
+          position: relative;
+          color: rgba(53, 53, 53, 1);
+          &::before {
+            content: "";
+            display: block;
+            width: 10px;
+            bottom: 0;
+            left: -10px;
+            z-index: -1;
+            height: 25px;
+            position: absolute;
+            background: rgba(34, 45, 116, 0.051);
+            clip-path: polygon(100% 100%, 100% 0, 0 100%);
+          }
+        }
+
+        &.active {
+          .comments-container__single--comment {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 0;
+
+            &::before {
+              display: none;
+            }
+            &::after {
+              content: "";
+              display: block;
+              width: 10px;
+              bottom: 0;
+              right: -10px;
+              z-index: -1;
+              height: 25px;
+              position: absolute;
+              background: rgba(34, 45, 116, 0.051);
+              clip-path: polygon(100% 100%, 0% 0%, 0% 100%);
+            }
+          }
+        }
+
+        &--author {
+          margin-bottom: 5px;
+        }
+
+        &.active {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  #comment-form {
+    margin-left: -15px;
+    display: flex;
+    align-items: center;
+    border-top: solid 1px var(--color-gray);
+    textarea {
+      border: none;
+      display: block;
+      padding: 20px;
+      width: 100%;
+      height: 100px;
+      resize: none;
+    }
+    input[type="submit"] {
+      background-color: var(--color-green);
+      color: white;
+      border: none;
+      height: 42px;
+      padding: 10px 25px;
+      flex-grow: 0;
+    }
+  }
+}

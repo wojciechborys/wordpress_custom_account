@@ -1,0 +1,42 @@
+.fpern-blocker{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height: 100vh;
+    background:rgba(0,0,0, 0.7);
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index:9999;
+
+    .inner{
+        max-width:600px;
+        padding:100px;
+        background-color: white;
+        text-align: center;
+
+        svg{
+            margin-bottom:30px;
+        }
+
+        h3{
+            font-weight: 500;
+            font-size: 48px;
+            color: var(--color-darkblue);
+            line-height: 110%;
+            margin-bottom:45px;
+        }
+
+        a{
+            background: var(--color-green);
+            color:white;
+            text-decoration: none;
+            padding:16px 25px;
+            font-weight: 500;
+            font-size: 18px;
+            display: inline-block;
+        }
+    }
+}

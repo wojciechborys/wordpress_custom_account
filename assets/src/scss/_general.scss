@@ -1,0 +1,20 @@
+.top-hero {
+  height: 300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  h1 {
+    color: white;
+    margin-bottom: 50px;
+  }
+}
+
+@media print {
+  header,
+  .top-hero {
+    display: none !important;
+  }
+}

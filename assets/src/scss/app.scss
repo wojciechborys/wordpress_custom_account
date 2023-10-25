@@ -1,0 +1,15 @@
+:root {
+  --color-darkblue: #222d74;
+  --color-gray: #b7b7b7;
+  --color-dark: #353535;
+  --color-red: #f30000;
+  --color-green: #2eb135;
+  --color-lightgray: #d9d9d9;
+}
+
+@import "./header.scss";
+@import "./footer.scss";
+@import "./general.scss";
+@import "./forms.scss";
+@import "./blocker.scss";
+@import "./communication.scss";
